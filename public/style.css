@@ -1,0 +1,84 @@
+body {
+    background-color: #000; /* 經典黑底 */
+    color: #c0c0c0;         /* 預設銀灰色文字 */
+    font-family: 'Courier New', Courier, monospace; /* 等寬字體 */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* style.css */
+/* 確保 span 繼承字體 */
+span {
+    font-family: 'Courier New', Courier, monospace;
+}
+#game-container {
+    width: 900px;
+    height: 95vh;
+    border: 2px solid #444;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+#output-area {
+    flex: 1;
+    overflow-y: auto; /* 內容多時自動捲動 */
+    padding-bottom: 10px;
+    white-space: pre-wrap; /* 保留換行 */
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* 隱藏捲軸樣式 (Webkit) */
+#output-area::-webkit-scrollbar {
+    width: 8px;
+}
+#output-area::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+#input-area {
+    display: flex;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.prompt {
+    color: #0f0;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 18px;
+    outline: none;
+}
+
+/* --- 特殊文字顏色 --- */
+.room-title {
+    color: #ffff00; /* 黃色 */
+    font-weight: bold;
+}
+.exits {
+    color: #00ffff; /* 青色 */
+}
+.system {
+    color: #ff00ff; /* 紫色 */
+}
+.error {
+    color: #ff5555; /* 紅色 */
+}
+.chat {
+    color: #00ff00; /* 綠色 */
+}
